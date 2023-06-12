@@ -1,0 +1,13 @@
+tasks:
+  Naver_temperature:
+    robotTaskName: Naver_temperature
+  Daum_temperature:
+    robotTaskName: Daum_temperature
+condaConfigFile: conda.yaml
+ignoreFiles:
+- .gitignore
+artifactsDir: output
+PATH:
+- .
+PYTHONPATH:
+- .

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230609 15:00:23.093" rpa="true" schemaversion="3">
+<suite id="s1" name="Naver01" source="C:\Users\강동여성인력개발센터\Documents\Robots\naver01">
+<suite id="s1-s1" name="Tasks" source="C:\Users\강동여성인력개발센터\Documents\Robots\naver01\tasks.robot">
+<test id="s1-s1-t1" name="Naver_temperature" line="6">
+<kw name="Naver_start">
+<kw name="Open Available Browser" library="RPA.Browser.Selenium">
+<arg>https://search.naver.com/search.naver?where=nexearch&amp;sm=top_hty&amp;fbm=0&amp;ie=utf8&amp;query=%ED%98%84%EC%9E%AC+%EA%B8%B0%EC%98%A8</arg>
+<arg>headless=${FALSE}</arg>
+<doc>Attempts to open a browser on the user's device from a set of
+supported browsers. Automatically downloads a corresponding webdriver
+if none is already installed.</doc>
+<msg timestamp="20230609 15:00:24.154" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20230609 15:00:24.154" level="INFO">====== WebDriver manager ======</msg>
+<msg timestamp="20230609 15:00:25.454" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20230609 15:00:26.704" level="INFO">Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox</msg>
+<msg timestamp="20230609 15:00:26.704" level="INFO" html="true">&lt;p&gt;Attempted combinations:&lt;/p&gt;&lt;div class="doc"&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt;&lt;th&gt;Download&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg timestamp="20230609 15:00:26.704" level="INFO">Opening url 'https://search.naver.com/search.naver?where=nexearch&amp;sm=top_hty&amp;fbm=0&amp;ie=utf8&amp;query=%ED%98%84%EC%9E%AC+%EA%B8%B0%EC%98%A8'</msg>
+<status status="PASS" starttime="20230609 15:00:24.154" endtime="20230609 15:00:27.375"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230609 15:00:32.386" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230609 15:00:27.375" endtime="20230609 15:00:32.386"/>
+</kw>
+<status status="PASS" starttime="20230609 15:00:24.154" endtime="20230609 15:00:32.386"/>
+</kw>
+<kw name="Get_temperature">
+<kw name="Get Text" library="RPA.Browser.Selenium">
+<var>${text}</var>
+<arg>//*[@id="main_pack"]/section[1]/div[1]/div[2]/div[1]/div[1]/div/div[2]/div/div[1]/div[1]/div[2]/strong</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230609 15:00:32.420" level="INFO">${text} = 현재 온도
+26.8°</msg>
+<status status="PASS" starttime="20230609 15:00:32.387" endtime="20230609 15:00:32.420"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230609 15:00:35.422" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230609 15:00:32.420" endtime="20230609 15:00:35.423"/>
+</kw>
+<status status="PASS" starttime="20230609 15:00:32.386" endtime="20230609 15:00:35.423"/>
+</kw>
+<kw name="Naver_close">
+<kw name="Close Browser" library="RPA.Browser.Selenium">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230609 15:00:35.423" endtime="20230609 15:00:37.575"/>
+</kw>
+<status status="PASS" starttime="20230609 15:00:35.423" endtime="20230609 15:00:37.575"/>
+</kw>
+<status status="PASS" starttime="20230609 15:00:24.154" endtime="20230609 15:00:37.575"/>
+</test>
+<status status="PASS" starttime="20230609 15:00:23.153" endtime="20230609 15:00:37.575"/>
+</suite>
+<status status="PASS" starttime="20230609 15:00:23.137" endtime="20230609 15:00:37.575"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Naver01">Naver01</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tasks">Naver01.Tasks</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
